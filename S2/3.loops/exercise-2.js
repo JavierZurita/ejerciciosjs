@@ -7,8 +7,7 @@ const alien = {
 }
 
 for (const key in alien) {
-    if (Object.hasOwnProperty.call(alien, key)) {
-        const datos = alien[key];
-        console.log(datos);
-    }
+
+        console.log(alien[key]);
+
 }

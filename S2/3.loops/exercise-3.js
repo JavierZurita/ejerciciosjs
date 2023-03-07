@@ -4,7 +4,7 @@ const placesToTravel = [{id: 5, name: 'Japan'}, {id: 11, name: 'Venecia'}, {id: 
 for(let i = 0; i < placesToTravel.length; i++){
 
     if(placesToTravel[i].id === 11 || placesToTravel[i].id === 40){
-        delete placesToTravel[i];
+        placesToTravel.splice(i,1);
     }
 
 }
