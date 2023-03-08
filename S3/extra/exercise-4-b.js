@@ -9,7 +9,7 @@ const countries = [
   
 
   let btn$$ = document.querySelector('button');
-  const countriesList$$ = document.createElement('div'); // Creo div padre de countries
+  const countriesList$$ = document.createElement('ul'); // Creo div padre de countries
   document.body.appendChild(countriesList$$);
 
   //Creo los divs hijos
@@ -30,11 +30,21 @@ const countries = [
   
   console.group(countriesList$$);
 
-  btn$$.addEventListener('click', function(){
+  btn$$.addEventListener('click', removeConEvent);
+
+
+  function removeSinEvent(){
     console.log("Click en botón");
     
-    let lastDiv = countriesList$$.lastElementChild;
-    console.log("Ultimo elemento " + lastDiv);
+    console.log("Ultimo elemento " + countriesList$$.lastElementChild);
     countriesList$$.lastElementChild.remove();
 
-  });
+  }
+
+  function removeConEvent(event){
+    
+    let div$$ = document.querySelectorAll('div');
+    
+    div$$[div$$.length-1].remove();
+
+  }

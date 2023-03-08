@@ -33,8 +33,8 @@ const users = [
 let total = 0, numSounds = 0;
 
 for (const user of users) {
-    for (const volume in user.favoritesSounds) {
-        total += user.favoritesSounds[volume].volume;
+    for (const key in user.favoritesSounds) {
+        total += user.favoritesSounds[key].volume;
         numSounds++;
     }
 

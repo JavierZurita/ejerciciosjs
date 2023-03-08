@@ -6,9 +6,8 @@ for (const toy of toys) {
   if (toy.name.includes('gato')) {
       const index = toys.indexOf(toy);
       //toys.splice(index,1);
-    delete toys[index];
+      delete toys[index];
     }
-
 
   }
 console.log(toys);

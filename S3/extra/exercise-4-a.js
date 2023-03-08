@@ -6,9 +6,13 @@ const countries = [
   { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=5" },
 ];
 
+const countriesList$$ = document.createElement('ul');
 let div$$ = document.createElement('div');
 let h4$$ = document.createElement('h4');
 let img$$ = document.createElement('img');
+
+document.body.appendChild(countriesList$$);
+
 
 for(let i = 0; i < countries.length; i++){
 
@@ -19,7 +23,7 @@ for(let i = 0; i < countries.length; i++){
     h4$$.textContent = countries[i].title;
     img$$.src = countries[i].imgUrl;
 
-    document.body.appendChild(div$$);
+    countriesList$$.appendChild(div$$);
     div$$.appendChild(h4$$);
     div$$.appendChild(img$$);
 

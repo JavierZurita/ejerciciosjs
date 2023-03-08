@@ -30,17 +30,21 @@ const users = [
     },
 ]
 
-const count = {};
+const soundCount = [];
 
 for (const user of users) {
     for (const sound in user.favoritesSounds) {
-
-        if(!count[sound]){
-            count[sound] = 1;
+        //console.log(sound);
+        if(!soundCount[sound]){
+            soundCount[sound] = 1;
+            //console.log("Lo creo por primera vez "+soundCount[sound]);
         } else {
-            count[sound]++;
+            soundCount[sound]++;
+            //console.log("Solo summo 1: " + soundCount[sound]);
+
         }
 
     }
 }
-console.log(count);
+
+console.log(soundCount);

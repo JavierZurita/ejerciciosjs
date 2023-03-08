@@ -7,7 +7,8 @@ btn$$.textContent = 'Boton';
 document.body.appendChild(btn$$);
 
 
-btn$$.addEventListener('click', function(){
-    console.log("Click en botón");
-}
+btn$$.addEventListener('click', function(e){
+    console.log(e);
+    }
 );
+

@@ -9,12 +9,13 @@ const countries = [
   
 
   // btn$$ = document.querySelector('button');
-  const countriesList$$ = document.createElement('div'); // Creo div padre de countries
+  const countriesList$$ = document.createElement('ul'); // Creo div padre de countries
   document.body.appendChild(countriesList$$);
 
   //Creo los divs hijos
   for(let i = 0; i < countries.length; i++){
   
+    let li$$ = document.createElement('li');
     let div$$ = document.createElement('div');
     let h4$$ = document.createElement('h4');
     let img$$ = document.createElement('img');
@@ -24,20 +25,39 @@ const countries = [
     img$$.src = countries[i].imgUrl;
     btn$$.textContent = "Eliminar Div";
 
-    countriesList$$.appendChild(div$$);
+    countriesList$$.appendChild(li$$);
+    li$$.appendChild(div$$);
     div$$.appendChild(h4$$);
     div$$.appendChild(img$$);
     div$$.appendChild(btn$$);
     
+     btn$$.addEventListener('click',deleteDiv);
+     
+     /*function deleteDiv (event) {
+      let div$$ = document.querySelectorAll('div');
+      console.log(div$$.length);
+      event.target.parentNode.parentNode.remove();
+      }
+    );
+    */
+     
 
-    btn$$.addEventListener('click', function(){
-        console.log("Click en botón");
+
+     /*function(){
+    //     console.log("Click en botón");
         
-        countriesList$$.removeChild(div$$);
+    //     countriesList$$.removeChild(div$$);
     
-      });   
-  }
-  
-  console.group(countriesList$$);
+    //   }
+    // ); */ 
 
- 
+
+  }
+   
+  console.log(countriesList$$);
+
+  function deleteDiv (event) {
+    let div$$ = document.querySelectorAll('div');
+    console.log(div$$.length);
+    event.target.parentNode.parentNode.remove();
+  }
