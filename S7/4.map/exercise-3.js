@@ -8,7 +8,7 @@ const cities = [
 
 const lista = cities.map((city) => {
     
-    return city.isVisited ? {...city, name: `${city.name} (Visitado)`} : {...city}  ;
+    return city.isVisited ?  name = `${city.name} (Visitado)` : city.name  ;
 
 });
 

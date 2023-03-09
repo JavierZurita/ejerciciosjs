@@ -8,13 +8,12 @@ const streamers = [
 const array = streamers.filter(streamer => {
 
     if(streamer.gameMorePlayed.includes("Legends")){
+
         if(streamer.age > 30){
             streamer.gameMorePlayed = streamer.gameMorePlayed.toUpperCase();
-            return streamer;
         }
         return streamer;
     }
-    return false;
 
 });
 
